@@ -1,5 +1,5 @@
 import Button from "../common/Button";
-import styles from "./topbar.module.scss";
+import styles from "./Topbar.module.scss";
 
 const Topbar = () => {
   const links = [

@@ -1,3 +1,4 @@
+import { CiSearch } from "react-icons/ci";
 import Button from "../common/Button";
 import SearchInput from "../common/SearchInput";
 import styles from "./Hero.module.scss";
@@ -16,7 +17,9 @@ const Hero = () => {
       <div className={styles.searchContainer}>
         <SearchInput />
         <Button rounded>
-          <div>Search</div>
+          <div>
+            <CiSearch fontSize={24} />
+          </div>
         </Button>
       </div>
     </div>
