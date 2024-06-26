@@ -1,3 +1,5 @@
+import styles from "./topbar.module.scss";
+
 const Topbar = () => {
   const links = [
     {
@@ -14,24 +16,25 @@ const Topbar = () => {
     },
   ];
   return (
-    <div>
-      <div>
+    <div className={styles.topbar}>
+      <div className={styles.leftSide}>
         <img
           src="./logo.svg"
           alt="logo"
         />
-        <nav>
+        <nav className={styles.navigation}>
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
+              className={styles.link}
             >
               {link.label}
             </a>
           ))}
         </nav>
       </div>
-      <div>
+      <div className={styles.rightSide}>
         <button>Login / Sign Up</button>
       </div>
     </div>
