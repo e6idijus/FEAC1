@@ -1,3 +1,4 @@
+import Button from "../common/Button";
 import styles from "./topbar.module.scss";
 
 const Topbar = () => {
@@ -35,7 +36,7 @@ const Topbar = () => {
         </nav>
       </div>
       <div className={styles.rightSide}>
-        <button>Login / Sign Up</button>
+        <Button>Login / Sign Up</Button>
       </div>
     </div>
   );
