@@ -1,3 +1,4 @@
+import CategoryList from "./components/home/CategoryList";
 import Hero from "./components/home/Hero";
 import Topbar from "./components/layout/Topbar";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <Topbar />
       <Hero />
+      <CategoryList />
     </>
   );
 }
