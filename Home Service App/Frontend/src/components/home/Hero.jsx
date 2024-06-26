@@ -1,4 +1,5 @@
 import Button from "../common/Button";
+import SearchInput from "../common/SearchInput";
 import styles from "./hero.module.scss";
 
 const Hero = () => {
@@ -13,6 +14,7 @@ const Hero = () => {
         Explore Best Home Service & Repair near you
       </p>
       <div>
+        <SearchInput />
         <Button rounded>
           <div>Search</div>
         </Button>
