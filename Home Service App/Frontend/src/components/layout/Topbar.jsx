@@ -36,7 +36,7 @@ const Topbar = () => {
         </nav>
       </div>
       <div className={styles.rightSide}>
-        <Button>Login / Sign Up</Button>
+        <Button>Login/ Sign Up</Button>
       </div>
     </div>
   );
