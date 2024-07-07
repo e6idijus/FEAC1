@@ -5,6 +5,7 @@ import { FaBrush } from "react-icons/fa6";
 import { FaBucket } from "react-icons/fa6";
 import { FaLightbulb } from "react-icons/fa6";
 import { PiPipeFill } from "react-icons/pi";
+import styles from "./CategoryList.module.scss";
 
 const categories = [
   { name: "cleaning", icon: FaBucket, color: "#b12fde" },
@@ -17,7 +18,7 @@ const categories = [
 
 const CategoryList = () => {
   return (
-    <div>
+    <div className={styles.container}>
       {categories.map((category) => (
         <CategoryCard
           key={category.name}
