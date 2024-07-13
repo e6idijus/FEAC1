@@ -10,10 +10,14 @@ const CategoryCard = ({ category }) => {
   const navigate = useNavigate();
 
   const categoryPath = generatePath(ROUTES.SEARCH_CATEGORY, { category: name });
+  const activeCategory = params.category;
 
   return (
     <div
-      className={styles.card}
+      className={classNames(
+        styles.card,
+        activeCategory === name && styles.active
+      )}
       onClick={() => navigate(categoryPath)}
     >
       <UrlIcon
