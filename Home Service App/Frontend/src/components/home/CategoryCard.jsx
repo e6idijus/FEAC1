@@ -1,4 +1,4 @@
-import { useNavigate, generatePath, useParams } from "react-router-dom";
+import { useNavigate, generatePath } from "react-router-dom";
 import UrlIcon from "../common/UrlIcon";
 import styles from "./CategoryList.module.scss";
 import { ROUTES } from "../../router/consts";
