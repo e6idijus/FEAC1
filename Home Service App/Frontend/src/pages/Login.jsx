@@ -1,16 +1,20 @@
 import Input from "@/components/common/Input";
 import styles from "./Login.module.scss";
 import Button from "@/components/common/Button";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@/router/consts";
 import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("email: ", email);
     console.log("passsword: ", password);
+    navigate(ROUTES.HOME);
   };
 
   return (
