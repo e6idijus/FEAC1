@@ -3,17 +3,18 @@ import styles from "./Login.module.scss";
 import Button from "@/components/common/Button";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "@/router/consts";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "@/context/UserContext";
 
 const Login = () => {
+  const { login } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("email: ", email);
-    console.log("passsword: ", password);
+    login({ email, password });
     navigate(ROUTES.HOME);
   };
 
