@@ -7,6 +7,7 @@ import RootLayout from "./components/layout/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import SearchCategory from "./pages/SearchCategory";
+import Register from "./pages/Register";
 import { UserProvider } from "./context/UserContext";
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.LOGIN,
         element: <Login />,
+      },
+      {
+        path: ROUTES.REGISTER,
+        element: <Register />,
       },
       {
         path: ROUTES.SEARCH_CATEGORY,
