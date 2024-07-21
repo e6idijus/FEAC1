@@ -7,6 +7,7 @@ import RootLayout from "./components/layout/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import SearchCategory from "./pages/SearchCategory";
+import AuthLayout from "./components/layout/AuthLayout";
 import Register from "./pages/Register";
 import { UserProvider } from "./context/UserContext";
 
@@ -28,16 +29,22 @@ const router = createBrowserRouter([
         element: <AboutUs />,
       },
       {
+        path: ROUTES.SEARCH_CATEGORY,
+        element: <SearchCategory />,
+      },
+    ],
+  },
+  {
+    element: <AuthLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: ROUTES.LOGIN,
         element: <Login />,
       },
       {
         path: ROUTES.REGISTER,
         element: <Register />,
-      },
-      {
-        path: ROUTES.SEARCH_CATEGORY,
-        element: <SearchCategory />,
       },
     ],
   },
