@@ -1,7 +1,7 @@
 import Input from "@/components/common/Input";
 import styles from "./Login.module.scss";
 import Button from "@/components/common/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTES } from "@/router/consts";
 import { useContext, useState } from "react";
 import { UserContext } from "@/context/UserContext";
@@ -43,7 +43,7 @@ const Login = () => {
         />
         <Button type="submit">Log in</Button>
         <div className={styles.link}>
-          <a href="#">Don't have an account? Sign up</a>
+          <Link to={ROUTES.REGISTER}>Don't have an account? Sign up</Link>
         </div>
       </form>
     </div>
